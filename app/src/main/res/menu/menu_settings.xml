@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/secondFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="到第二个页面" />
+
+</menu>

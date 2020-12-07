@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gq.jetpackdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.gq.jetpackdemo.lifecycle.MyApplicaiton"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.gq.jetpackdemo.paging.PagedListActivity"/>
+        <activity android:name="com.gq.jetpackdemo.workmamager.WorkManagerActivity" />
+        <activity android:name="com.gq.jetpackdemo.room.RoomDemoActivity" />
+        <activity android:name="com.gq.jetpackdemo.livedata.fragment.LiveDataFragmentActivity" />
+        <activity android:name="com.gq.jetpackdemo.viewmodel.TimerActivity" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@menu/menu_settings" />
+
+        <activity android:name="com.gq.jetpackdemo.navigation.NavigationActivity" />
+        <activity android:name="com.gq.jetpackdemo.lifecycle.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.gq.jetpackdemo.lifecycle.MyService" />
+    </application>
+
+</manifest>

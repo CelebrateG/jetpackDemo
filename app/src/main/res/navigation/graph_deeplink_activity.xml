@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_deeplink_activity">
+
+
+    <deepLink
+        android:id="@+id/deepLink"
+        app:uri="https://item.jd.com/100008204675.html" />
+</navigation>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lifecycle.MainActivity">
+
+
+    <Button
+        android:id="@+id/startService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startService"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/stopService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/startService"
+        android:text="stopService"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/navigationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startService"
+        android:text="navigationActivity"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/sendNotificationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigationBtn"
+        android:text="sendNotification"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/viewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendNotificationBtn"
+        android:text="viewModel + liveData"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/viewModelLiveDataFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewModel"
+        android:text="viewModel + liveData + fragment"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/roomlLiveDataViewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewModelLiveDataFragment"
+        android:text="room + liveData + viewModel"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/workManagerDataBinding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roomlLiveDataViewModel"
+        android:text="workManager+dataBinding"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/paging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workManagerDataBinding"
+        android:text="paging"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>

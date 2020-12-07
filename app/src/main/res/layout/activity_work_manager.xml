@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.gq.jetpackdemo.databinding.BookRatingUtil" />
+
+        <variable
+            name="book"
+            type="com.gq.jetpackdemo.databinding.Book" />
+
+        <variable
+            name="EventHandler"
+            type="com.gq.jetpackdemo.databinding.EventHandleListener" />
+
+        <variable
+            name="networkImageUrl"
+            type="String" />
+
+        <variable
+            name="networkImageUrl2"
+            type="String" />
+
+        <variable
+            name="localImage"
+            type="int" />
+
+        <variable
+            name="viewModel"
+            type="com.gq.jetpackdemo.databinding.TwoWayBindingViewModel" />
+
+        <variable
+            name="viewModel2"
+            type="com.gq.jetpackdemo.databinding.TwoWayBindingViewModel2" />
+    </data>
+
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".workmamager.WorkManagerActivity">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.title}" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1"
+            android:text="@{book.author}" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:text="@{BookRatingUtil.getRating(book.rating)}" />
+
+        <Button
+            android:id="@+id/bindingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv3"
+            android:onClick="@{EventHandler.onButtonClicked}"
+            android:text="bindingBtn" />
+
+        <include
+            android:id="@+id/subLayout"
+            layout="@layout/sub_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bindingBtn"
+            app:book="@{book}"></include>
+
+        <ImageView
+            android:id="@+id/iv"
+            imageUrl="@{networkImageUrl}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subLayout" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            defaultImageResource="@{localImage}"
+            imageUrl="@{networkImageUrl2}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv2"
+            android:text="@={viewModel.userName}" />
+
+        <EditText
+            android:id="@+id/etName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etName"
+            android:text="@={viewModel2.userName}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etName2"
+            />
+
+    </RelativeLayout>
+</layout>
