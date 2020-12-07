@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-
     <data>
-
         <variable
             name="movie"
             type="com.gq.jetpackdemo.network.model.Movie" />
-
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,7 +15,7 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{movie.images.small}" />
+            android:src="@{movie.images.small}" />
 
         <TextView
             android:id="@+id/tv1"
@@ -33,7 +30,5 @@
             android:layout_marginLeft="5dp"
             android:text="@{movie.year}" />
         />
-
-
     </LinearLayout>
 </layout>
